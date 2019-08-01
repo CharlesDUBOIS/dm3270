@@ -170,13 +170,16 @@ public class TerminalClientTest {
   }
 
   @Test
-  public void shouldGetWelcomeScreenWithSpecialCharacters() throws Exception {
+  public void shouldGetWelcomeScreenWithWrongCharset() throws Exception {
     setupExtendedFlow(TERMINAL_MODEL_TYPE_THREE, SCREEN_DIMENSIONS, "/login-special-characters.yml");
 
     awaitKeyboardUnlock();
     assertThat(getScreenText())
             .isEqualTo( getFileContent("login-special-character-charset-CP1047.txt"));
+  }
 
+  @Test
+  public void shouldGetWelcomeScreenWithRightCharset() throws Exception {
     setupExtendedFlowWithCharsetCP1147(TERMINAL_MODEL_TYPE_THREE, SCREEN_DIMENSIONS, "/login-special-characters.yml");
     awaitKeyboardUnlock();
     assertThat(getScreenText())
