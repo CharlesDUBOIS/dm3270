@@ -50,7 +50,7 @@ public class TerminalClientTest {
 
   private static final Logger LOG = LoggerFactory.getLogger(TerminalClientTest.class);
   private static final int TERMINAL_MODEL_TYPE_TWO = 2;
-  private static final int TERMINAL_MODEL_TYPE_THREE = 2;
+  private static final int TERMINAL_MODEL_TYPE_THREE = 3;
   private static final int TERMINAL_MODEL_TYPE_M_FIVE = 5;
   private static final ScreenDimensions SCREEN_DIMENSIONS_M_FIVE = new ScreenDimensions(27, 132);
   private static final ScreenDimensions SCREEN_DIMENSIONS = new ScreenDimensions(24, 80);
